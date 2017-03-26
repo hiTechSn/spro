@@ -34,9 +34,13 @@ public class Minchange {
          ar[i]=Integer.parseInt(sr[i]);
         }
         ArrayList<Integer> al=new ArrayList();
+	    if(al.size()==0)
+		    System.out.print(0);
+	    else{
          al.addAll(repeat(ar));
         for (Iterator<Integer> it = al.iterator(); it.hasNext();) {
             System.out.print(it.next()+" ");
+	}
         }
         
     }

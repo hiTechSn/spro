@@ -33,7 +33,11 @@ public class Largest{
           
          ar[i]=Integer.parseInt(sr[i]);
         }
-        System.out.print(largest(ar));
+	    int j=simele(ar);
+	    if(j<0)
+		    System.out.print("No");
+	    else
+            System.out.print(j);
       /*  ArrayList<Integer> al=new ArrayList();
          al.addAll(repeat(ar));
         for (Iterator<Integer> it = al.iterator(); it.hasNext();) {
@@ -75,4 +79,12 @@ public class Largest{
         }
         return Integer.parseInt(s);
     }
+	public static int simele(int ar[]){
+	   int i=-1;
+		for(i=0;i<ar.length;i++){
+		if(ar[i]==i)
+			return i;
+		}
+		return i;
+	}
 }
